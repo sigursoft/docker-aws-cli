@@ -1,14 +1,19 @@
-FROM ubuntu:16.04
+FROM ubuntu:17.10
 MAINTAINER Fabian Stäber, fabian@fstab.de
+MAINTAINER Anton Kozik, anton.kozik@gmail.com
 
-ENV LAST_UPDATE=2016-08-21
+ENV LAST_UPDATE=2018-01-27
 
 #####################################################################################
-# Current version is aws-cli/1.10.53 Python/2.7.12
+# Current version is aws-cli/1.14.32 Python/2.7.14
 #####################################################################################
 
 RUN apt-get update && \
     apt-get upgrade -y
+
+RUN apt-get install -y \
+    tzdata \
+    locales
 
 # Set the timezone
 RUN echo "Europe/Warsaw" | tee /etc/timezone && \
@@ -55,12 +60,12 @@ RUN \
 USER root
 
 RUN mkdir examples
-ADD examples/etag.sh /home/aws/examples/etag.sh
-ADD examples/s3diff.sh /home/aws/examples/s3diff.sh
-ADD examples/start.sh /home/aws/examples/start.sh
-ADD examples/terminate.sh /home/aws/examples/terminate.sh
-ADD examples/init-instance.script /home/aws/examples/init-instance.script
-ADD examples/README.md /home/aws/examples/README.md
+# ADD examples/etag.sh /home/aws/examples/etag.sh
+# ADD examples/s3diff.sh /home/aws/examples/s3diff.sh
+# ADD examples/start.sh /home/aws/examples/start.sh
+# ADD examples/terminate.sh /home/aws/examples/terminate.sh
+# ADD examples/init-instance.script /home/aws/examples/init-instance.script
+# ADD examples/README.md /home/aws/examples/README.md
 RUN chown -R aws:aws /home/aws/examples
 
 USER aws
