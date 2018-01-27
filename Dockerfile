@@ -11,7 +11,7 @@ RUN apt-get update && \
     apt-get upgrade -y
 
 # Set the timezone
-RUN echo "Europe/Berlin" | tee /etc/timezone && \
+RUN echo "Europe/Warsaw" | tee /etc/timezone && \
     ln -fs /usr/share/zoneinfo/Europe/Berlin /etc/localtime && \
     dpkg-reconfigure -f noninteractive tzdata
 
