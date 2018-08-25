@@ -26,13 +26,13 @@ Build from Source
 
    ```bash
    cd docker-aws-cli
-   docker build -t="twitarchuk/aws-cli" .
+   docker build -t="sigursoft/aws-cli" .
    ```
 
 5. Run a docker container with that image
 
    ```bash
-   docker run -t -i twitarchuk/aws-cli
+   docker run -t -i sigursoft/aws-cli
    ```
 
 Getting started with the AWS CLI
