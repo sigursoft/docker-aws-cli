@@ -1,5 +1,5 @@
 FROM ubuntu:18.04
-LABEL maintainer="Anton Kozik"
+LABEL maintainer="pazitron@gmail.com"
 
 ENV LAST_UPDATE=2018-12-11
 
