@@ -3,7 +3,7 @@ docker-aws-cli
 
 [Docker](https://www.docker.com) image for running the [Amazon Web Services Command Line Interface](http://aws.amazon.com/cli/).
 
-The versions currently included are *aws-cli 1.14.32* on *Python 2.7.14*.
+The versions currently included are *aws-cli 1.16.72* on *Python 2.7.15rc1*.
 
 Background
 ----------
@@ -20,7 +20,7 @@ Build from Source
 3. Clone _docker-aws-cli_ from [GitHub](https://github.com/twitarchuk/docker-aws-cli)
 
    ```bash
-   git clone https://github.com/twitarchuk/docker-aws-cli.git
+   git clone https://github.com/sigursoft/docker-aws-cli.git
    ```
 4. Build the docker image
 
