@@ -1,4 +1,4 @@
-FROM ubuntu:17.10
+FROM ubuntu:18.04
 LABEL maintainer="Anton Kozik"
 
 ENV LAST_UPDATE=2018-12-11
@@ -7,8 +7,7 @@ ENV LAST_UPDATE=2018-12-11
 # Current version is aws-cli/1.16.72 Python/2.7.14
 #####################################################################################
 
-RUN apt-get update && \
-    apt-get upgrade -y
+RUN apt-get update -q
 
 RUN apt-get install -y \
     tzdata \
@@ -32,7 +31,7 @@ ENV PYTHONIOENCODING=UTF-8
 
 # man and less are needed to view 'aws <command> help'
 # ssh allows us to log in to new instances
-# vim is useful to write shell scripts
+# nano is useful to write shell scripts
 # python* is needed to install aws cli using pip install
 
 RUN apt-get install -y \
