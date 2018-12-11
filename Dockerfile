@@ -1,11 +1,10 @@
 FROM ubuntu:17.10
-MAINTAINER Fabian Stäber, fabian@fstab.de
-MAINTAINER Anton Kozik, anton.kozik@gmail.com
+LABEL maintainer="Anton Kozik"
 
-ENV LAST_UPDATE=2018-01-27
+ENV LAST_UPDATE=2018-12-11
 
 #####################################################################################
-# Current version is aws-cli/1.14.32 Python/2.7.14
+# Current version is aws-cli/1.16.72 Python/2.7.14
 #####################################################################################
 
 RUN apt-get update && \
@@ -43,7 +42,7 @@ RUN apt-get install -y \
     python \
     python-pip \
     python-virtualenv \
-    vim
+    nano
 
 RUN adduser --disabled-login --gecos '' aws
 WORKDIR /home/aws
