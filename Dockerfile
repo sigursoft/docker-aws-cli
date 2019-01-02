@@ -4,7 +4,7 @@ LABEL maintainer="pazitron@gmail.com"
 ENV LAST_UPDATE=2018-12-11
 
 #####################################################################################
-# Current version is aws-cli/1.16.81 Python/2.7.14
+# Current version is aws-cli/1.16.81 Python/2.7.15rc1
 #####################################################################################
 
 RUN apt-get update -q
