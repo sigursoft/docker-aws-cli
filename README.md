@@ -17,7 +17,7 @@ Build from Source
 -----------------
 
 1. Make sure [Docker](https://www.docker.com) is installed.
-3. Clone _docker-aws-cli_ from [GitHub](https://github.com/twitarchuk/docker-aws-cli)
+3. Clone _docker-aws-cli_ from [GitHub](https://github.com/sigursoft/docker-aws-cli)
 
    ```bash
    git clone https://github.com/sigursoft/docker-aws-cli.git
@@ -26,13 +26,13 @@ Build from Source
 
    ```bash
    cd docker-aws-cli
-   docker build -t="sigursoft/aws-cli" .
+   docker build -t="my-aws-cli" .
    ```
 
 5. Run a docker container with that image
 
    ```bash
-   docker run -t -i sigursoft/aws-cli
+   docker run -t -i my-aws-cli
    ```
 
 Getting started with the AWS CLI
