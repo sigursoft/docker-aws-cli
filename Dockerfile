@@ -1,10 +1,11 @@
 FROM ubuntu:18.04
 LABEL maintainer="pazitron@gmail.com"
 
-ENV LAST_UPDATE=2018-12-11
+ENV LAST_UPDATE=2019-03-12
+ENV AWSCLI_VERSION=1.16.114
 
 #####################################################################################
-# Current version is aws-cli/1.16.81 Python/2.7.15rc1
+# Current version is aws-cli/1.16.114 Python/3.6.7
 #####################################################################################
 
 RUN apt-get update -q
@@ -38,10 +39,10 @@ RUN apt-get install -y \
     less \
     man \
     ssh \
-    python \
-    python-pip \
-    python-virtualenv \
-    nano
+    nano \
+    python3-pip
+
+RUN pip3 install virtualenv
 
 RUN adduser --disabled-login --gecos '' aws
 WORKDIR /home/aws
@@ -50,8 +51,8 @@ USER aws
 
 RUN \
     mkdir aws && \
-    virtualenv aws/env && \
-    ./aws/env/bin/pip install awscli && \
+    python3 -m virtualenv aws/env && \
+    ./aws/env/bin/pip install awscli==${AWSCLI_VERSION} && \
     echo 'source $HOME/aws/env/bin/activate' >> .bashrc && \
     echo 'complete -C aws_completer aws' >> .bashrc
 
