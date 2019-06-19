@@ -1,8 +1,8 @@
 FROM ubuntu:18.04
 LABEL maintainer="pazitron@gmail.com"
 
-ENV LAST_UPDATE=2019-05-25
-ENV AWSCLI_VERSION=1.16.166
+ENV LAST_UPDATE=2019-06-19
+ENV AWSCLI_VERSION=1.16.181
 
 #####################################################################################
 # Current version is aws-cli/1.16.166 Python/3.6.7
