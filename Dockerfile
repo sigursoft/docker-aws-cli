@@ -40,7 +40,8 @@ RUN apt-get install -y \
     man \
     ssh \
     nano \
-    python3-pip
+    python3-pip \
+    zip
 
 RUN pip3 install virtualenv
 
