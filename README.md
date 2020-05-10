@@ -3,7 +3,7 @@ docker-aws-cli
 
 [Docker](https://www.docker.com) image for running the [Amazon Web Services Command Line Interface](http://aws.amazon.com/cli/).
 
-The versions currently included are *aws-cli 1.16.181* on *Python 3.6.7*.
+The versions currently included are *aws-cli 1.18.46* on *Python 3.6.7*.
 
 Background
 ----------
