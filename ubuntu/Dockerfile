@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM ubuntu:20.04
 LABEL maintainer="Anton Kozik"
 
 ENV LAST_UPDATE=2020-05-10
