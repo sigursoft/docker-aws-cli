@@ -1,11 +1,11 @@
 FROM ubuntu:18.04
-LABEL maintainer="pazitron@gmail.com"
+LABEL maintainer="Anton Kozik"
 
-ENV LAST_UPDATE=2019-06-19
-ENV AWSCLI_VERSION=1.16.181
+ENV LAST_UPDATE=2020-05-10
+ENV AWSCLI_VERSION=1.18.46
 
 #####################################################################################
-# Current version is aws-cli/1.16.166 Python/3.6.7
+# Current version is aws-cli/1.18.46 Python/3.6.7
 #####################################################################################
 
 RUN apt-get update -q
@@ -36,6 +36,7 @@ ENV PYTHONIOENCODING=UTF-8
 # python* is needed to install aws cli using pip install
 
 RUN apt-get install -y \
+    jq \
     less \
     man \
     ssh \
